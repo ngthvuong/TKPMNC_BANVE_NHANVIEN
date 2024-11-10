@@ -8,6 +8,8 @@ const session = require("express-session")
 
 const app = express()
 
+app.use('/Tai_Nguyen', express.static(__dirname + '/Tai_Nguyen'))
+
 app.set("view engine", 'hbs')
 app.set("views", path.join(__dirname, "XL_Giao_Dien"))
 

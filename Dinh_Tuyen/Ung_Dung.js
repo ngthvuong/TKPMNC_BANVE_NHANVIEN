@@ -20,8 +20,14 @@ routes.get("/", XL_Bien_Co_Trang_Chinh.Man_Hinh_Chinh)
 
 routes.get("/ban-ve", XL_Bien_Co_Trang_Ban_Ve.Man_Hinh_Ban_Ve)
 routes.post("/ban-ve", XL_Bien_Co_Trang_Ban_Ve.Man_Hinh_Ban_Ve)
+routes.get("/ban-ve/xuat-chieu", XL_Bien_Co_Trang_Ban_Ve.Lay_Thong_Tin_Xuat_Chieu)
+routes.post("/ban-ve/tao-ve", XL_Bien_Co_Trang_Ban_Ve.Tao_Ve)
+
+
 
 routes.get("/danh-sach-xuat-chieu", XL_Bien_Co_Trang_Xuat_Chieu.Man_Hinh_Tra_Cuu_Xuat_Chieu)
+routes.get("/xuat-chieu/:ID", XL_Bien_Co_Trang_Xuat_Chieu.Man_Hinh_Tra_Cuu_Xuat_Chieu_Chi_Tiet)
+
 
 
 
