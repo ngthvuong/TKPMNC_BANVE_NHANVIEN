@@ -9,7 +9,7 @@ const XL_Bien_Co_Trang_Xuat_Chieu = require("../XL_Bien_Co/Bien_Co_Trang_Xuat_Ch
 
 routes.use((Yeu_Cau, Phan_Hoi, next) => {
     if (!Yeu_Cau.session.Nguoi_Dung) {
-        Phan_Hoi.redirect("/dang-nhap")
+        return Phan_Hoi.redirect("/dang-nhap")
     }
     Phan_Hoi.locals.Nguoi_Dung = Yeu_Cau.session.Nguoi_Dung
 
@@ -23,7 +23,7 @@ routes.post("/ban-ve", XL_Bien_Co_Trang_Ban_Ve.Man_Hinh_Ban_Ve)
 routes.get("/ban-ve/xuat-chieu", XL_Bien_Co_Trang_Ban_Ve.Lay_Thong_Tin_Xuat_Chieu)
 routes.post("/ban-ve/tao-ve", XL_Bien_Co_Trang_Ban_Ve.Tao_Ve)
 
-routes.get("/danh-sach-xuat-chieu", XL_Bien_Co_Trang_Xuat_Chieu.Man_Hinh_Tra_Cuu_Xuat_Chieu)
+routes.get("/xuat-chieu/danh-sach", XL_Bien_Co_Trang_Xuat_Chieu.Man_Hinh_Tra_Cuu_Xuat_Chieu)
 routes.get("/xuat-chieu/:ID", XL_Bien_Co_Trang_Xuat_Chieu.Man_Hinh_Tra_Cuu_Xuat_Chieu_Chi_Tiet)
 
 
